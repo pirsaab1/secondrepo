@@ -1,0 +1,70 @@
+PS F:\pyhton projects> mkdir maps_final_arena2
+>> Copy-Item maps\arena2.map* maps_final_arena2\
+>> python robot.py benchmark --maps-dir maps_final_arena2 --agents 150,200,300 --trials 25 --time-budget 90 --cbs-time-s 20 --out-dir final_arena2
+
+
+    Directory: F:\pyhton projects
+
+
+Mode                 LastWriteTime         Length Name                                                                                                        
+----                 -------------         ------ ----                                                                                                        
+d-----         9/23/2026   9:52 AM                maps_final_arena2                                                                                           
+  done arena2             n=150
+  done arena2             n=200
+  done arena2             n=300
+env                  n trials  success  95% CI       P1-only rescued activ. promo/run maxGrp  t_ok(s)  t/o
+----------------------------------------------------------------------------------------------------------
+arena2             150     25      88%  [0.70,0.96]      72%       4    28%      0.48      2   13.433    0
+arena2             200     25      88%  [0.70,0.96]      52%       9    48%      0.80      2   15.076    0
+arena2             300     25      64%  [0.45,0.80]      32%       8    68%      1.44      2   19.873    0
+
+  success  = all agents planned and conflict-free
+  P1-only  = fraction solved by the prioritized stage alone (internal control)
+  rescued  = trials that failed in phase 1 but succeeded after promotion
+  activ.   = fraction of trials where promotion was triggered at all
+
+
+PS F:\pyhton projects> mkdir maps_final_orz
+>> Copy-Item maps\orz300d.map* maps_final_orz\
+>> python robot.py benchmark --maps-dir maps_final_orz --agents 300 --trials 25 --time-budget 150 --cbs-time-s 40 --out-dir final_orz300d
+
+
+    Directory: F:\pyhton projects
+
+
+Mode                 LastWriteTime         Length Name                                                                                        
+----                 -------------         ------ ----                                                                                        
+d-----         9/23/2026   9:52 AM                maps_final_orz                                                                              
+  done orz300d            n=300
+env                  n trials  success  95% CI       P1-only rescued activ. promo/run maxGrp  t_ok(s)  t/o
+----------------------------------------------------------------------------------------------------------
+orz300d            300     25      80%  [0.61,0.91]      56%       6    44%      0.40      1   70.154    4
+
+  success  = all agents planned and conflict-free
+  P1-only  = fraction solved by the prioritized stage alone (internal control)
+  rescued  = trials that failed in phase 1 but succeeded after promotion
+  activ.   = fraction of trials where promotion was triggered at all
+
+
+PS F:\pyhton projects> mkdir maps_final_null
+>> Copy-Item maps\den505d.map*,maps\ost003d.map* maps_final_null\
+>> python robot.py benchmark --maps-dir maps_final_null --agents 300 --trials 25 --time-budget 90 --cbs-time-s 20 --out-dir final_null
+
+
+    Directory: F:\pyhton projects
+
+
+Mode                 LastWriteTime         Length Name                                                                                        
+----                 -------------         ------ ----                                                                                        
+d-----         9/23/2026   9:52 AM                maps_final_null                                                                             
+  done den505d            n=300
+  done ost003d            n=300
+env                  n trials  success  95% CI       P1-only rescued activ. promo/run maxGrp  t_ok(s)  t/o
+----------------------------------------------------------------------------------------------------------
+den505d            300     25      88%  [0.70,0.96]      72%       4    28%      0.28      1   38.156    3
+ost003d            300     25      96%  [0.80,0.99]      96%       0     4%      0.00      2   10.799    0
+
+  success  = all agents planned and conflict-free
+  P1-only  = fraction solved by the prioritized stage alone (internal control)
+  rescued  = trials that failed in phase 1 but succeeded after promotion
+  activ.   = fraction of trials where promotion was triggered at all
