@@ -2,7 +2,7 @@ PS F:\pyhton projects> mkdir maps_final_arena2
 >> Copy-Item maps\arena2.map* maps_final_arena2\
 >> python robot.py benchmark --maps-dir maps_final_arena2 --agents 150,200,300 --trials 25 --time-budget 90 --cbs-time-s 20 --out-dir final_arena2
 
-
+ssssssss
     Directory: F:\pyhton projects
 
 
